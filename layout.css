@@ -1,0 +1,306 @@
+:root {
+    --background1: #FFF8ED;
+    --background2: #FBE2CB;
+    --background3: #09223F;
+    --heading: #0D294A;
+    --headingHover: #154479;
+    --paragraf: #000;
+}
+
+#videoCarousel {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Keeps iframes in a line */
+    display: flex;
+    scroll-snap-type: x mandatory; /* Optional for smooth scrolling effects */
+}
+.video-slide {
+    flex: 0 0 30%; /* Adjusts the flexbox settings to allow individual elements to be of their size */
+    width: 100%; /* Or set to the width of the iframe */
+    padding: 10px;
+}
+
+
+iframe {
+    width: 100%;
+    height: 500px; /* Adjust height as necessary */
+    border-radius: 2rem;
+    border: white solid 10px;
+}
+
+button {
+    padding: 10px 20px; /* Sufficient padding for touch targets */
+    border: none; /* No borders for a cleaner look */
+    background-color:var(--background2) ; /* Bootstrap primary blue for visibility */
+    color: rgb(0, 0, 0); /* White text for contrast */
+    border-radius: 5px; /* Rounded corners on buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 10px 5px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover for interaction feedback */
+}
+
+button:focus {
+    outline: none; /* Remove focus outline for aesthetics; consider accessibility */
+}
+
+@media (max-width: 1340px) {
+
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Responsive Images and Iframes */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    iframe {
+        width: 100%;
+        height: 500px; /* Adjust height as necessary */
+        border-radius: 2rem;
+        border: white solid 5px;
+    }
+
+    /* Navigation Adjustments */
+    nav {
+        padding-left: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    nav li {
+        list-style-type: none;
+        margin: 10px 0;
+    }
+
+    /* Header Image Responsiveness */
+    header img {
+        width: auto; /* Allows image to scale with its container's width */
+        max-height: 400px; /* Sets a maximum height to prevent excessive vertical stretching */
+    }
+
+    /* Grid Adjustments */
+    .grid-container1, .grid-container2 {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout for simplicity */
+        gap: 20px;
+        padding: 20px;
+        align-content: center;
+    }
+    
+    .grid-container4 {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+
+    /* Content Section Styling */
+    .jegErMultimediedesigner, .hejDetHerEr {
+        display: grid;
+        max-width: 100%; /* Allows content to fit container width */
+        align-content: center;
+        grid-column: 1;
+        padding-left: 0;
+    }
+
+    .jegErMultimediedesigner {
+        grid-row: 3;
+        order: 1;
+    }
+
+    .hejDetHerEr {
+        grid-row: 2;
+        order: 2;
+    }
+
+    /* Flex Container for Additional Sections */
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        margin: 5% 0;
+    }
+
+    .flex-item {
+        width: auto; /* Ensures flex items are responsive */
+       
+    }
+
+    .flex-item p { max-width: 200ch; }
+
+    .flex-item img {
+        max-width: 300px;
+        mix-blend-mode: darken;
+    }
+
+    /* Skills Section Margin Adjustment */
+    #Skills {
+        margin: 5%;
+    }
+
+    /* Specific Adjustments for Grid Container Items */
+    .grid-container2 > div:first-child img {
+        display: none; /* Hides specific image */
+    }
+
+    /* Skills and Ratings Style */
+    .star-rating {
+        font-size: 20px;
+        color: gold;
+    }
+
+    /* Video Section Grid */
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+
+    /* Footer Flexbox Adjustment */
+    footer {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 10px; /* Slightly reduces padding for a wider layout */
+    }
+}
+
+
+@media (max-width: 768px) {
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure images and iframes are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+iframe {
+    width: 100%;
+    height: 500px; /* Adjust height as necessary */
+    border-radius: 2rem;
+    border: white solid 5px;
+}
+
+#videoCarousel {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Keeps iframes in a line */
+    display: flex;
+    scroll-snap-type: x mandatory; /* Optional for smooth scrolling effects */
+}
+.video-slide {
+    flex: 0 0 70%; /* Adjusts the flexbox settings to allow individual elements to be of their size */
+    width: 100%; /* Or set to the width of the iframe */
+    padding: 10px;
+}
+nav {
+    padding-left: 0%;
+}
+
+/* Header and Navigation */
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.nav li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+header img {
+    height: 100%; 
+    width: auto;
+}
+.grid-container1, .grid-container2, .grid-container4, .grid-container5 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.jegErMultimediedesigner {
+    display: grid;
+    max-width: 60ch;
+    align-content: center;
+    grid-column: 1;
+    grid-row: 3;
+    order: 1;
+    padding-left: 0;
+}
+
+.hejDetHerEr {
+display: grid;
+grid-column: 1;
+grid-row: 2;
+order: 2;
+}
+  
+
+    .flex-container {
+      flex-direction: column;
+      margin: 5% 0; 
+    }
+  
+    .flex-item {
+      width: auto;
+      margin: 10%; /* Let each item take full width on smaller screens */
+    }
+
+    .flex-item img {
+        mix-blend-mode: darken;
+    }
+    #Skills {
+        margin: 5%;
+    }
+  
+    .grid-container2 > div:first-child img {
+        display: none;
+    }
+
+/* Skills and Ratings */
+.star-rating {
+    font-size: 20px;
+    color: gold;
+}
+
+/* Video Section */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+}
+

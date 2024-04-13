@@ -1,0 +1,285 @@
+:root {
+    --background1: #FFF8ED;
+    --background2: #FBE2CB;
+    --background3: #09223F;
+    --heading: #0D294A;
+    --headingHover: #154479;
+    --paragraf: #000;
+}
+
+/*************** Resets ***************/
+#toTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ffab4ba8;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#toTopButton:hover {
+    background-color: #ca6c00a8; /* Darken the button a bit on hover */
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/********************* Background colours ***************/
+html {
+    background-color: var(--background1);
+}
+#HvemErJeg{
+    background-color: var(--background2);
+}
+#Skills{
+    background-color: var(--background1);
+}
+#kodeProjekter{
+    background-color: var(--background2);
+    background-image: url(/public/images/kodeProjekter_BG.png);
+    background-size: cover;
+}
+#videoProduktioner {
+    background-color: var(--background3);
+    padding: 5%;
+}
+/********************* Fonts *****************/
+
+h1 {
+    font-size: clamp(24px, 5vw, 48px);
+}
+
+h2 {
+    font-size: clamp(20px, 1.5vw, 38px);
+}
+
+h3 {
+    font-size: clamp(18px, 2.5vw, 30px);
+}
+
+h4 {
+    font-size: clamp(16px, 3.5vw, 26px);
+}
+
+p {
+font-size: clamp(16px, 1vw, 20px);
+font-weight: 500;
+color: var(--paragraf);
+line-height: 1.6;
+white-space: pre-wrap;
+}
+
+h1,h2,h3,h4{
+    color: var(--heading);
+}
+.Color {
+    color: var(--background2);
+    text-align: center;
+}
+/******************* Grid ***************************/
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+
+}
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-right: 10%;
+
+}
+
+  
+  
+.grid-container4 {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+#kodeProjekter {
+    padding-top: 1%;
+}
+.grid-container5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    padding-top: 2%;
+    margin-right: 10%;
+    margin-left: 10%;
+    
+}.flex-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.flex-container img, .smykker img {
+    mix-blend-mode: darken;
+}
+
+.flex-item { width: 48%; }
+.flex-item p { max-width: 40ch; }
+
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.falafel,
+.lightFestival {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/******************* LAYOUT ************************/
+html {
+    scroll-behavior: smooth;
+}
+nav {
+    padding-left: 15%;
+    padding-bottom: 5%;
+}
+
+header {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-image: url(/public/images/Hero_Bg.png);
+    background-size: cover;
+}
+
+.jegErMultimediedesigner {
+        display: grid;
+        max-width: 60ch;
+        align-content: center;
+        grid-column: 1;
+        grid-row: 2;
+        order: 2;
+        padding-left: 15%;
+
+}
+
+.hejDetHerEr {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    order: 1;
+    align-content: center;
+    justify-items: center;
+    align-items: start;
+}
+
+.HvemErJeg {
+    display: grid;
+    align-content: center;
+   margin: 0% 10% 0% 10%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+#Skills {
+    margin: 10% 10% 5% 10%;
+}
+
+#kodeProjekter h2{
+    text-align: center;
+}
+#kodeProjekter img {
+    width: auto;
+    height: 80%;
+}
+
+#studiejob p {
+    max-width: 50ch;
+}
+
+
+
+
+/*************** STYLES *************/
+
+.star-rating {
+    font-size: 24px;
+    color: #FFD700;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+   
+}
+nav li a {
+    display: block; 
+    color: var(--heading);
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav li a:hover{
+    color: var(--headingHover);
+    text-decoration: underline;
+}
+header img {
+    height: 400px; 
+    width: auto;
+}
+#HvemErJeg img {
+    mix-blend-mode: exclusion; 
+}
+
+.smykker img {
+    width: auto;
+    height: 70%;
+    mix-blend-mode: darken;
+}
+
+#kodeProjekter a{
+    margin-top: 2%;
+    text-decoration: none;
+    color: var(--paragraf);
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+a > span {
+    text-decoration: underline;
+  }
+  a > span:hover {
+    color: var(--headingHover);
+  }
