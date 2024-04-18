@@ -39,7 +39,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover for interaction feedback */
+    background-color: #fcbb7f; /* Darker blue on hover for interaction feedback */
 }
 
 button:focus {

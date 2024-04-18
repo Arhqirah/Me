@@ -283,3 +283,26 @@ a > span {
   a > span:hover {
     color: var(--headingHover);
   }
+
+  /* Targets the scrollbar itself */
+::-webkit-scrollbar {
+    width: 12px; /* adjust the width of the scrollbar */
+}
+
+/* Targets the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #09223F; /* dark color for the thumb */
+    border-radius: 6px; /* optional: adds rounded corners to the scrollbar thumb */
+    border: 3px solid #FBE2CB; /* light color for the border around the thumb */
+}
+
+/* Targets the track (part the thumb slides within) */
+::-webkit-scrollbar-track {
+    background-color: #FBE2CB; /* light color for the track */
+    border-radius: 6px; /* optional: adds rounded corners to the scrollbar track */
+}
+
+/* Optional: style for hover over the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0A2C51; /* slightly darker shade when hovering */
+}
