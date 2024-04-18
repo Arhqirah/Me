@@ -225,6 +225,30 @@ iframe {
     max-width: 50ch;
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+   background-image: url(/public/images/footer.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+    color: white;
+}
+
+.social-media-buttons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media-buttons img {
+    width: 30px; /* Størrelsen af ikonerne */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-media-buttons a:hover img {
+    transform: scale(1.1); /* Let zoom-effekt ved hover */
+}
+
 
 
 
