@@ -96,14 +96,7 @@ button:focus {
         padding: 20px;
         align-content: center;
     }
-    
-    .grid-container4 {
-        display: grid;
-        grid-template-columns:1fr 1fr;
-        gap: 20px;
-        padding: 20px;
-    }
-    
+
 
     /* Content Section Styling */
     .jegErMultimediedesigner, .hejDetHerEr {

@@ -8,6 +8,7 @@
     <title>Simon Melbyes Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -94,19 +95,93 @@
     </section>
     <section id="kodeProjekter">
         <h2>Eksempler på Kode projekter</h2>
-        <div class="grid-container4">
-            <div class="falafel">
-                <img src="/public/images/falafel.png" alt="falafel-factory">
-                <a href="https://district19-exam.netlify.app/">link til site: <span>Falafel Factory</span></a>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Each card is a slide -->
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-image">
+                  <img src="/public/images/falafel.png" alt="Falafel Factory Image">
+                </div>
+                <div class="card-content">
+                  <h2>Falafel Factory</h2>
+                  <p>Eksamens opgave på 2. Semester</p>
+                  <a href="https://example.com">Se Mere</a>
+                </div>
+              </div>
             </div>
-            <div class="lightFestival">
-                <img src="/public/images/lightfest.png" alt="Copenhagen Light Festival">
-                <a href="https://cphlightfestival.netlify.app/">link til site:<span> Copenhagen Light Festival</span></a>
-            </div>
-    </div>
-    <a href="#" id="toTopButton" title="Go to top">↑</a>
+            <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/public/images/lightfest.png" alt="Copenhagen Light Festival Image">
+                  </div>
+                  <div class="card-content">
+                    <h2>Copenhagen Light Festival</h2>
+                    <p>Case opgave af redesign af CPH light Festivals hjemmeside</p>
+                    <a href="https://example.com">Se Mere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/public/images/1.semester-eksamen.png" alt="Placeholder Image">
+                  </div>
+                  <div class="card-content">
+                    <h2>1.Semester Portfolio</h2>
+                    <p>Eksamens opgave for 1.semester</p>
+                    <a href="https://vermillion-babka-924e7c.netlify.app/">Se Mere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/public/images/todoApp.png" alt="Placeholder Image">
+                  </div>
+                  <div class="card-content">
+                    <h2>Todo App</h2>
+                    <p>Dette var en kort skole opgave, i at lave en todo app</p>
+                    <a href="https://mmd-to-do-app.netlify.app/">Se Mere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/public/images/CssOnly.png" alt="Placeholder Image">
+                  </div>
+                  <div class="card-content">
+                    <h2>Only Css</h2>
+                    <p>En skoleopgave hvor vi skulle prøve at opbygge et figma projekt kun med css</p>
+                    <a href="https://figma-consulting.netlify.app/">Se Mere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/public/images/Forms.png" alt="Placeholder Image">
+                  </div>
+                  <div class="card-content">
+                    <h2>Forms</h2>
+                    <p>iIntro til hvordan man bruger forms med de rigtige requirements</p>
+                    <a href="https://foodforms.netlify.app/">Se Mere</a>
+                  </div>
+                </div>
+              </div>
 
-    </section>
+            <!-- Repeat for each card -->
+            <!-- Other cards go here -->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If you need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <a href="#" id="toTopButton" title="Go to top">↑</a>
+      </section>
     <section id="videoProduktioner">
         <h2 class="Color">Video Produktioner</h2>
         <div id="videoCarousel" class="video-grid">
@@ -185,6 +260,7 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
     $(document).ready(function(){
         let scrollAmount = 0;
@@ -202,6 +278,42 @@
             }, 'slow');
         });
     });
+
+    var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    simulateTouch: true, // Enable touch emulation
+    grabCursor: true, // Show grab cursor when hovering over Swiper
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 30
+      }
+    }
+  });
+  document.querySelector('.swiper-button-prev').style.left = '10px';
+document.querySelector('.swiper-button-next').style.right = '10px';
+
     </script>
 </body>
 </html>
