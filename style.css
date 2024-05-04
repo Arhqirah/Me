@@ -145,7 +145,6 @@ img {
 .flex-item { width: 48%; }
 .flex-item p { max-width: 40ch; }
 
-
 .video-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
